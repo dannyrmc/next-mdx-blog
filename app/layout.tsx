@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import BreakpointIndicator from "@/components/breakpoint-indicator";
+import { siteConfig } from "@/config/site";
 
 const geistMono = localFont({
   src: [
@@ -36,8 +37,24 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Next & MDX Blog",
-  description: "Blog website built with Next.js and MDX",
+  title: siteConfig.title,
+  description: siteConfig.description,
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteConfig.url,
+    title: siteConfig.title,
+    description: siteConfig.description,
+    siteName: siteConfig.title,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.title,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
