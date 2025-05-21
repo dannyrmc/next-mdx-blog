@@ -119,7 +119,7 @@ export default async function Post({ params }) {
     <div className="flex flex-col">
       <section
         id="content"
-        className="noise relative flex min-h-svh basis-full flex-col items-start justify-start gap-10 border-b-[1px] border-border/60 bg-background px-6 pt-20 md:px-0"
+        className="noise relative flex basis-full flex-col items-start justify-start gap-10 border-b-[1px] border-border/60 bg-background px-6 pt-20 md:px-0"
       >
         <article className="mx-auto flex w-full max-w-[480px] flex-col pb-[72px] pt-16 sm:pb-[72px] sm:pt-[88px] lg:max-w-2xl">
           <div className="flex flex-col gap-9">
@@ -129,7 +129,7 @@ export default async function Post({ params }) {
               </h1>
               <div className="flex flex-wrap justify-start gap-4">
                 <Category category_label={post.frontmatter.category} />
-                <div className="flex items-center gap-1.5 px-0.5 font-sans text-sm font-normal text-foreground sm:px-0 sm:text-base">
+                <div className="flex items-center gap-1.5 font-sans text-sm font-normal text-foreground sm:px-0 sm:text-base">
                   <FormattedDate date={post.frontmatter.date} />
                   <p>·</p>
                   <p>{post.reading_time || 0} min read</p>
