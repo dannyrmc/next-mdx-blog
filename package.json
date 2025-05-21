@@ -1,0 +1,49 @@
+{
+  "name": "next-mdx-blog",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@next/mdx": "^14.2.7",
+    "@radix-ui/react-slot": "^1.2.2",
+    "@svgr/webpack": "^8.0.1",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@types/mdx": "^2.0.13",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.1.4",
+    "framer-motion": "^11.11.11",
+    "lucide-react": "^0.509.0",
+    "next": "^14.2.14",
+    "next-mdx-remote": "^5.0.0",
+    "next-themes": "^0.4.6",
+    "plaiceholder": "^3.0.0",
+    "prism-react-renderer": "^2.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remark-gfm": "^4.0.0",
+    "sharp": "^0.33.5",
+    "sugar-high": "^0.7.4",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "20.6.1",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.3.0",
+    "tailwindcss": "^3.4.3",
+    "typescript": "5.2.2"
+  }
+}
