@@ -27,6 +27,7 @@ export default function ThemeToggle() {
     return (
       <button
         onClick={onClick}
+        aria-label="Theme toggle"
         className={`group flex h-8 min-w-8 items-center justify-center rounded-full transition-all duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2
           ${isActive ? "bg-toggle-foreground/80" : "bg-toggle-accent"} 
           hover:bg-toggle-foreground`}
