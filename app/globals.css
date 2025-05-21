@@ -119,7 +119,7 @@ pre::-webkit-scrollbar {
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* white */
+    --background: 0 0% 98%; /* neutral-50 */
     --foreground: 0 0% 9%; /* neutral-900 */
     --primary: 0 0% 9%; /* neutral-900 */
     --primary-foreground: 0 0% 98%; /* neutral-50 */

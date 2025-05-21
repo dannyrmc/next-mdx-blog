@@ -13,7 +13,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="noise fixed top-0 z-50 flex w-full items-center justify-center overflow-hidden border-b border-border/60 bg-background px-4 py-4 supports-[backdrop-filter]:bg-background/80 supports-[backdrop-filter]:backdrop-blur-[20px] sm:px-12 lg:px-16 xl:px-0">
+    <header className="fixed top-0 z-50 flex w-full items-center justify-center overflow-hidden border-b border-border/60 bg-background px-4 py-4 supports-[backdrop-filter]:bg-background/80 supports-[backdrop-filter]:backdrop-blur-[20px] sm:px-12 lg:px-16 xl:px-0">
       <nav className="w-3xl flex flex-1 flex-row items-center justify-between pr-2 sm:pr-0 lg:max-w-4xl">
         <Link
           className="overflow-hidden rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"

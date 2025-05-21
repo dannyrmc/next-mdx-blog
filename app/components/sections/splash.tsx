@@ -7,7 +7,7 @@ export default function Splash() {
   return (
     <section
       id="splash"
-      className="noise flex min-h-[85vh] w-full flex-col items-center justify-between"
+      className="flex min-h-[85vh] w-full flex-col items-center justify-between"
     >
       <div className="flex w-full max-w-3xl flex-1 flex-col-reverse items-center justify-center gap-8 px-6 sm:max-w-4xl sm:px-12 md:flex-row md:justify-between lg:px-0">
         <div className="flex w-full flex-col items-start justify-between gap-6 sm:flex-row sm:items-center sm:gap-12 sm:pb-3 md:flex-col md:items-start md:gap-6">

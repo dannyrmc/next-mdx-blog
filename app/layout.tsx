@@ -66,7 +66,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`noise bg-background text-foreground ${inter.variable} ${geistMono.variable} ${playfair.variable}`}
+      className={`bg-background text-foreground ${inter.variable} ${geistMono.variable} ${playfair.variable}`}
     >
       <body className="flex min-h-svh flex-col antialiased">
         <ThemeProvider
