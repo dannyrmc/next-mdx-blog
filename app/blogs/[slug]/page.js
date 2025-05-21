@@ -121,7 +121,7 @@ export default async function Post({ params }) {
         id="content"
         className="noise relative flex min-h-svh basis-full flex-col items-start justify-start gap-10 border-b-[1px] border-border/60 bg-background px-6 pt-20 md:px-0"
       >
-        <article className="mx-auto flex w-full max-w-[480px] flex-col pb-[72px] pt-[48px] sm:pb-[72px] sm:pt-[88px] lg:max-w-2xl">
+        <article className="mx-auto flex w-full max-w-[480px] flex-col pb-[72px] pt-16 sm:pb-[72px] sm:pt-[88px] lg:max-w-2xl">
           <div className="flex flex-col gap-9">
             <div className="flex flex-col gap-5 sm:gap-6">
               <h1 className="text-balance px-[2px] font-playfair text-[40px] font-medium leading-[110%] tracking-tight sm:text-[56px]">
