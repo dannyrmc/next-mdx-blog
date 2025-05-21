@@ -65,8 +65,8 @@ export default async function BlogCard(props: BlogCardProps) {
             </div>
           </div>
         </div>
-        <div className="flex h-10 min-w-10 items-center justify-center rounded-lg bg-primary transition-all duration-300 ease-in-out group-hover:bg-primary/90 sm:h-12 sm:min-w-12">
-          <IconArrow className="inline-block size-5 bg-cover bg-no-repeat fill-primary-foreground transition-all duration-300 ease-in-out group-hover:-translate-y-[3px] group-hover:translate-x-[3px] sm:size-6" />
+        <div className="flex h-10 min-w-10 items-center justify-center rounded-lg bg-primary transition-all duration-300 ease-in-out sm:group-hover:bg-primary/90 sm:h-12 sm:min-w-12">
+          <IconArrow className="inline-block size-5 bg-cover bg-no-repeat fill-primary-foreground transition-all duration-300 ease-in-out sm:group-hover:-translate-y-[3px] sm:group-hover:translate-x-[3px] sm:size-6" />
         </div>
       </div>
     </Link>

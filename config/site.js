@@ -9,6 +9,6 @@ export const siteConfig = {
   description: "",
   keywords: [],
   repos: {
-    blog: "https://github.com/dannyrmc/",
+    blog: "https://github.com/dannyrmc/next-mdx-blog",
   },
 };
