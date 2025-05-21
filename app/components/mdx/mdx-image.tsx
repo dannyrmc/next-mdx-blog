@@ -22,7 +22,7 @@ export default async function MdxImage({
   return (
     <figure className="mx-auto mb-10 w-full max-w-[672px] sm:mb-16">
       <div
-        className={`relative w-full overflow-hidden rounded-2xl sm:rounded-3xl ${
+        className={`relative w-full overflow-hidden rounded-2xl sm:rounded-3xl dark:opacity-90 ${
           border ? "border border-border/60" : ""
         }`}
         style={{ paddingBottom: `${aspectRatio * 100}%` }}

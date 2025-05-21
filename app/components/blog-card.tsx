@@ -30,7 +30,7 @@ export default async function BlogCard(props: BlogCardProps) {
       {hasImage && (
         <div className="flex w-full flex-row">
           {/* 16:9 ratio image */}
-          <div className="relative w-full overflow-hidden rounded-lg pb-[56.3%]">
+          <div className="relative w-full overflow-hidden rounded-lg dark:opacity-90 pb-[56.3%]">
             <Image
               className="bg-muted object-cover"
               src={props.image_src! || "/placeholder.svg"}
