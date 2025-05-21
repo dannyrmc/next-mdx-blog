@@ -1,12 +1,12 @@
 export const siteConfig = {
   name: "Blog",
   title: "Next & MDX Blog",
-  url: "",
+  url: "https://coolblogbro.vercel.app/",
   email: "",
   username: "",
   mailto: "",
-  ogImage: "",
-  description: "",
+  ogImage: "https://coolblogbro.vercel.app/og.jpg",
+  description: "Crafted blog template built using Next.js, Tailwind CSS, and MDX.",
   keywords: [],
   repos: {
     blog: "https://github.com/dannyrmc/next-mdx-blog",
