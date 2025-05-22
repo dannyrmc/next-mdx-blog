@@ -2,11 +2,12 @@ import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Inter, Playfair_Display } from "next/font/google";
+import BreakpointIndicator from "@/components/breakpoint-indicator";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from "@vercel/analytics/next";
+import { siteConfig } from "@/config/site";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import BreakpointIndicator from "@/components/breakpoint-indicator";
-import { siteConfig } from "@/config/site";
 
 const geistMono = localFont({
   src: [
@@ -83,7 +84,7 @@ export default function RootLayout({
           <Footer />
         </ThemeProvider>
         {/* <VercelSpeedInsights /> */}
-        {/* <VercelAnalytics /> */}
+        <Analytics />
       </body>
     </html>
   );
