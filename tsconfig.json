@@ -25,6 +25,6 @@
       "@/icons/*": ["public/icons/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/blogs/[slug]/page.js", "app/not-found.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/blogs/[slug]/page.tsx", "app/not-found.tsx"],
   "exclude": ["node_modules"]
 }

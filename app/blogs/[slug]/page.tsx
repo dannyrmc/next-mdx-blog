@@ -1,3 +1,5 @@
+import { Metadata } from 'next';
+import { ReactNode } from "react";
 import { getPostBySlug, getAllPostSlugs, getAllPosts } from "@/lib/mdx";
 import { notFound } from "next/navigation";
 import { siteConfig } from "@/config/site";
@@ -6,15 +8,50 @@ import Category from "@/components/category";
 import { FormattedDate } from "@/components/date";
 import BlogCard from "@/app/components/blog-card";
 
-// Function to extract and format project name from slug
-const getProjectNameFromSlug = (slug) => {
+// Define interfaces for the data structures
+interface CoverImage {
+  url: string;
+  alt?: string;
+}
+
+interface Frontmatter {
+  title: string;
+  author: string;
+  date: string;
+  category: string;
+  excerpt: string;
+  coverImage?: CoverImage;
+  visible?: boolean;
+}
+
+// Full post with content (used for the current post)
+interface Post {
+  slug: string;
+  content: ReactNode; // Updated to ReactNode based on MDXContent component
+  frontmatter: Frontmatter;
+  reading_time?: number;
+}
+
+// Other posts without content (used for the list of posts)
+interface OtherPosts {
+  slug: string;
+  frontmatter: Frontmatter;
+  reading_time?: number;
+}
+
+interface BlogParams {
+  slug: string;
+}
+
+// Function to extract and format post name from slug
+const getPostNameFromSlug = (slug: string): string => {
   return slug
     .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 };
 
-async function getPostData(slug) {
+async function getPostData(slug: string): Promise<Post | null> {
   try {
     const post = await getPostBySlug(slug);
     if (!post) {
@@ -27,7 +64,7 @@ async function getPostData(slug) {
   }
 }
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }: { params: BlogParams }): Promise<Metadata> {
   const post = await getPostData(params.slug);
 
   if (!post) {
@@ -36,11 +73,11 @@ export async function generateMetadata({ params }) {
 
   const { title, author, date, category, excerpt, coverImage } =
     post.frontmatter;
-  const projectName = getProjectNameFromSlug(params.slug);
+  const postName = getPostNameFromSlug(params.slug);
   const ogImage = coverImage?.url || `${siteConfig.url}/og.jpg`;
 
   return {
-    title: `${siteConfig.name} | ${projectName}`,
+    title: `${postName} | ${siteConfig.name}`,
     description: excerpt,
     openGraph: {
       title: title,
@@ -71,7 +108,12 @@ export async function generateMetadata({ params }) {
   };
 }
 
-const MoreBlogs = ({ currentSlug, allPosts }) => {
+interface MoreBlogsProps {
+  currentSlug: string;
+  allPosts: OtherPosts[]; // Changed from PostListItem[] to OtherPosts[]
+}
+
+const MoreBlogs: React.FC<MoreBlogsProps> = ({ currentSlug, allPosts }) => {
   const sortedPosts = allPosts
     .filter(
       (post) =>
@@ -84,7 +126,7 @@ const MoreBlogs = ({ currentSlug, allPosts }) => {
         new Date(b.frontmatter.date || 0).getTime() -
         new Date(a.frontmatter.date || 0).getTime()
     )
-    .slice(0, 2); // Limit to 2 most recent projects
+    .slice(0, 2); // Limit to 2 most recent posts
 
   return (
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-6">
@@ -106,14 +148,19 @@ const MoreBlogs = ({ currentSlug, allPosts }) => {
   );
 };
 
-export default async function Post({ params }) {
+interface PostProps {
+  params: BlogParams;
+}
+
+export default async function Post({ params }: PostProps) {
   const post = await getPostData(params.slug);
 
   if (!post) {
     notFound();
   }
 
-  const allPosts = await getAllPosts();
+  // Update the type annotation for getAllPosts
+  const allPosts = await getAllPosts() as OtherPosts[];
 
   return (
     <div className="flex flex-col">
@@ -157,7 +204,7 @@ export default async function Post({ params }) {
   );
 }
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<BlogParams[]> {
   const posts = await getAllPostSlugs();
   return posts.map((post) => ({
     slug: post.slug,
