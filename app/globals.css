@@ -131,7 +131,7 @@ pre::-webkit-scrollbar {
     --border: 0 0% 83%; /* neutral-300 */
     --muted: 0 0% 45%; /* neutral-500 */
     --muted-foreground: 0 0% 9%; /* neutral-900 */
-    --accent: 176 69% 22%; /* teal-800 - set to 64% for teal-600 ??? */
+    --accent: 176 69% 22%; /* teal-800 */
     --accent-foreground: 0 0% 98%; /* neutral-50 */
     --ring: 175 84% 32%; /* teal-600 */
     --radius: 0.5rem; /* 8px */
@@ -163,7 +163,7 @@ pre::-webkit-scrollbar {
     --border: 0 0% 32%; /* neutral-600 */
     --muted: 0 0% 45%; /* neutral-500 */
     --muted-foreground: 0 0% 83%; /* neutral-300 */
-    --accent: 175 84% 32%; /* teal-600 - set to 64% for teal-400 ??? */
+    --accent: 175 84% 32%; /* teal-600 */
     --accent-foreground: 0 0% 83%; /* neutral-300 */
     --ring: 172 66% 50%; /* teal-400 */
 
