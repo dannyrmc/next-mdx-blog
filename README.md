@@ -62,14 +62,16 @@ For example, `first-post.mdx`
 ```bash
 ✅ filename-with-dashes.mdx
 ```
-
 ***
 
-### Using MDX Components
+## Using MDX Components
 
-In addition to standard Markdown features, Blog comes with a few MDX components predefined.
+![Cover image of Blog](/public/images/readme-mdx-components.png)
 
-**Image Component**
+
+In addition to standard Markdown features, Blog comes with a few predefined MDX components.
+
+### Image Component
 
 ```bash
 <Image
@@ -89,7 +91,7 @@ You can also add an optional `caption` and/or `border`
 />
 ```
 
-**Callout Component**
+### Callout Component
 
 ```bash
 <Callout emoji="💡">
@@ -97,7 +99,7 @@ You can also add an optional `caption` and/or `border`
 </Callout>
 ```
 
-**Highlighter Component**
+### Highlighter Component
 
 ```bash
 <Highlighter>
@@ -105,7 +107,7 @@ You can also add an optional `caption` and/or `border`
 </Highlighter>
 ```
 
-**Inline Code Component**
+### Inline Code Component
 
 ```bash
 <InlineCode>
@@ -113,7 +115,7 @@ You can also add an optional `caption` and/or `border`
 </InlineCode>
 ```
 
-**Code Block Component**
+### Code Block Component
 
 Similar to Markdown, code blocks are formatted by surrounding the code with backtick marks.
 
@@ -146,6 +148,6 @@ filename_3.jpg
 
 ---
 
-### License
+## License
 
 This project is licensed under the [MIT License](/LICENSE).
