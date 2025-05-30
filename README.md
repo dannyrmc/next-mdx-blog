@@ -73,16 +73,16 @@ In addition to standard Markdown features, Blog comes with a few predefined MDX 
 
 ### Image Component
 
-```bash
+```markdown
 <Image
   src="/images/placeholder.webp"
   alt="Description of image"
 />
 ```
 
-You can also add an optional `caption` and/or `border`
+You can also add an optional `caption` and/or `border`.
 
-```bash
+```markdown
 <Image
   src="/images/sample.webp"
   alt="Description of image"
@@ -93,7 +93,7 @@ You can also add an optional `caption` and/or `border`
 
 ### Callout Component
 
-```bash
+```markdown
 <Callout emoji="💡">
   This is a callout component with an emoji
 </Callout>
@@ -101,7 +101,7 @@ You can also add an optional `caption` and/or `border`
 
 ### Highlighter Component
 
-```bash
+```markdown
 <Highlighter>
   Highlighted sentence.
 </Highlighter>
@@ -109,7 +109,7 @@ You can also add an optional `caption` and/or `border`
 
 ### Inline Code Component
 
-```bash
+```markdown
 <InlineCode>
   node
 </InlineCode>
@@ -121,7 +121,7 @@ Similar to Markdown, code blocks are formatted by surrounding the code with back
 
 You can also specify the coding language after the first 3 backtick marks.
 
-````bash
+````markdown
 ```javascript
 const Category = (props) => {
   return (
@@ -136,7 +136,7 @@ export default Category;
 ```
 ````
 
-To escape the code formatting, change the language to `text`
+To escape the code formatting, change the language to `text`.
 
 ````bash
 ```text
