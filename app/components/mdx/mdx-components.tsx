@@ -9,9 +9,9 @@ const Highlighter = ({ children }: { children: React.ReactNode }) => (
 );
 
 const InlineCode = ({ children }: { children: React.ReactNode }) => (
-  <code className="reset-prose select-all whitespace-nowrap rounded-lg border border-border bg-muted/5 px-2 py-1.5 font-mono text-sm font-normal leading-[16px] text-foreground md:text-base">
+  <span className="inline-code select-all whitespace-nowrap rounded-lg border border-border bg-muted/5 px-2 py-1.5 font-mono font-normal text-foreground">
     {children}
-  </code>
+  </span>
 );
 
 const Callout = ({

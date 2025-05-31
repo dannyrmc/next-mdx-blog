@@ -105,6 +105,8 @@ pre::-webkit-scrollbar {
   background-image: url("/noise-dark.png");
 }
 
+/* Line Grid */
+
 .line-grid {
   background-image: linear-gradient(to right, #e5e5e5 1px, transparent 1px),
     linear-gradient(to bottom, #e5e5e5 1px, transparent 1px);

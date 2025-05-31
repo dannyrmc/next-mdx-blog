@@ -78,7 +78,7 @@ export const Pre: React.ComponentType<MDXPreProps> = ({
   ...props
 }) => (
   <pre
-    className="my-12 max-h-[650px] select-none overflow-x-auto rounded-3xl border border-border/60 bg-neutral-900 p-6 dark:bg-muted/10 sm:my-12 md:p-8"
+    className="max-h-[650px] select-none overflow-x-auto rounded-3xl border border-border/60 bg-neutral-900 p-6 dark:bg-muted/10 md:p-8"
     {...props}
   >
     <div className="no-ligatures w-max min-w-full font-mono">{children}</div>

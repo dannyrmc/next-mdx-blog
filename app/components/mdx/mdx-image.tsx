@@ -20,7 +20,7 @@ export default async function MdxImage({
   const aspectRatio = img.height / img.width;
 
   return (
-    <figure className="mx-auto mb-10 w-full max-w-[672px] sm:mb-16">
+    <figure className="mx-auto mb-10 w-full max-w-[672px]">
       <div
         className={`relative w-full overflow-hidden rounded-2xl sm:rounded-3xl dark:opacity-90 ${
           border ? "border border-border/60" : ""
