@@ -56,6 +56,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+  icons: {
+    icon:
+      process.env.NODE_ENV === "development"
+        ? "/icons/favicon-512-dev.svg"
+        : "/icons/favicon-512-light.svg",
+  },
 };
 
 export default function RootLayout({
