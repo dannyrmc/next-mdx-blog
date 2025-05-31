@@ -19,7 +19,7 @@ Crafted blog template built using Next.js, Tailwind CSS, MDX, and TypeScript. Th
 
 As of this writing, Blog has achieved a 100% Lighthouse score.
 
-***
+---
 
 ## Install & Run
 
@@ -27,33 +27,32 @@ As of this writing, Blog has achieved a 100% Lighthouse score.
 
 2. Install dependencies from [/package.json](/package.json):
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 3. Start the dev server:
 
-    ```bash
-    npm run dev
-    ```
+   ```bash
+   npm run dev
+   ```
 
 4. View app locally in the browser
 
-    ```bash
-    http://localhost:3000
-    ```
+   ```bash
+   http://localhost:3000
+   ```
 
 ## Add Content
 
-The MDX content is located in the [/_posts](/_posts) directory. This is where you can add or modify content.
+The MDX content is located in the [/\_posts](/_posts) directory. This is where you can add or modify content.
 
 Just add a new file with the extension of `.mdx`
 
 For example, `first-post.mdx`
 
-<br>
-
-**IMPORTANT**: the filename must be lowercase and use dashes instead of spaces.
+> [!IMPORTANT]  
+> The filename must be lowercase and use dashes instead of spaces.
 
 ```bash
 🚫 filename with spaces.mdx
@@ -62,12 +61,12 @@ For example, `first-post.mdx`
 ```bash
 ✅ filename-with-dashes.mdx
 ```
-***
+
+---
 
 ## Using MDX Components
 
 ![Cover image of Blog](/public/images/readme-mdx-components.png)
-
 
 In addition to standard Markdown features, Blog comes with a few predefined MDX components.
 
@@ -126,7 +125,7 @@ You can also specify the coding language after the first 3 backtick marks.
 const Category = (props) => {
   return (
     <div className="rounded-3xl border p-2">
-      <p className="font-bold uppercase leading-3 tracking-widest text-sm">
+      <p className="text-sm font-bold uppercase leading-3 tracking-widest">
         {props.category_label}
       </p>
     </div>
