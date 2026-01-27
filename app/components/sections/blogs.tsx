@@ -81,6 +81,25 @@ export default async function Blogs() {
             />
           </div>
         )}
+
+        <div className="flex flex-col gap-6">
+          <h1 className="pl-2 font-sans text-sm font-medium uppercase tracking-widest text-muted sm:text-base">
+            —Grid
+          </h1>
+          <div className="z-10 col-span-full grid w-full grid-cols-1 gap-4 md:grid-cols-2 [&>*:last-child]:md:col-span-2">
+            {remainingPosts.map((post) => (
+              <BlogCard
+                key={post.slug}
+                primary_link={`/blogs/${post.slug}`}
+                category_label={post.frontmatter.category}
+                blog_title={post.frontmatter.title}
+                date={post.frontmatter.date || "No date"}
+                reading_time={post.reading_time || 0}
+              />
+            ))}
+          </div>
+        </div>
+
         <div className="z-10 flex w-full flex-col gap-12">
           {years.map((year) => (
             <div key={year} className="flex w-full flex-1 flex-col gap-6">

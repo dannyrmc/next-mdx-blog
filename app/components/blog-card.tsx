@@ -25,12 +25,12 @@ export default async function BlogCard(props: BlogCardProps) {
   return (
     <Link
       href={props.primary_link}
-      className="group z-20 flex w-full flex-1 cursor-pointer flex-col gap-4 rounded-3xl border border-border/60 bg-card p-4 transition-all duration-300 ease-in-out @container hover:border-border hover:bg-card-hover focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring focus-visible:ring-offset-4"
+      className="group z-20 flex w-full flex-1 cursor-pointer flex-col gap-3 rounded-3xl border border-border/60 bg-card p-4 transition-all duration-300 ease-in-out @container hover:border-border hover:bg-card-hover focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring focus-visible:ring-offset-4"
     >
       {hasImage && (
         <div className="flex w-full flex-row">
           {/* 16:9 ratio image */}
-          <div className="relative w-full overflow-hidden rounded-lg dark:opacity-90 pb-[66.7%] sm:pb-[56.3%]">
+          <div className="relative w-full overflow-hidden rounded-lg pb-[66.7%] dark:opacity-90 sm:pb-[56.3%]">
             <Image
               className="bg-muted object-cover"
               src={props.image_src! || "/placeholder.svg"}
@@ -50,7 +50,7 @@ export default async function BlogCard(props: BlogCardProps) {
             <div className="flex @md:hidden">
               <Category category_label={props.category_label} />
             </div>
-            <h1 className="text-balance px-0.5 pl-0.5 pr-1 font-playfair text-[32px] font-medium leading-[120%] tracking-[-0.5px] text-foreground sm:text-[36px] sm:leading-[110%]">
+            <h1 className="line-clamp-2 text-balance px-0.5 pl-0.5 pr-1 font-playfair text-[32px] font-medium leading-[120%] tracking-[-0.5px] text-foreground sm:text-[36px] sm:leading-[44px]">
               {props.blog_title}
             </h1>
             <div className="flex justify-start gap-5">
@@ -65,8 +65,8 @@ export default async function BlogCard(props: BlogCardProps) {
             </div>
           </div>
         </div>
-        <div className="flex h-10 min-w-10 items-center justify-center rounded-lg bg-primary transition-all duration-300 ease-in-out sm:group-hover:bg-primary/90 sm:h-12 sm:min-w-12">
-          <IconArrow className="inline-block size-5 bg-cover bg-no-repeat fill-primary-foreground transition-all duration-300 ease-in-out sm:group-hover:-translate-y-[3px] sm:group-hover:translate-x-[3px] sm:size-6" />
+        <div className="flex h-10 min-w-10 items-center justify-center rounded-lg bg-primary transition-all duration-300 ease-in-out sm:h-12 sm:min-w-12 sm:group-hover:bg-primary/90">
+          <IconArrow className="inline-block size-5 bg-cover bg-no-repeat fill-primary-foreground transition-all duration-300 ease-in-out sm:size-6 sm:group-hover:-translate-y-[3px] sm:group-hover:translate-x-[3px]" />
         </div>
       </div>
     </Link>
