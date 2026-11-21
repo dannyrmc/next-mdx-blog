@@ -43,14 +43,6 @@ interface BlogParams {
   slug: string;
 }
 
-// Function to extract and format post name from slug
-const getPostNameFromSlug = (slug: string): string => {
-  return slug
-    .split("-")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-};
-
 async function getPostData(slug: string): Promise<Post | null> {
   try {
     const post = await getPostBySlug(slug);
@@ -74,11 +66,10 @@ export async function generateMetadata(props: { params: Promise<BlogParams> }): 
 
   const { title, author, date, category, excerpt, coverImage } =
     post.frontmatter;
-  const postName = getPostNameFromSlug(params.slug);
   const ogImage = coverImage?.url || `${siteConfig.url}/og.jpg`;
 
   return {
-    title: `${postName} | ${siteConfig.name}`,
+    title: `${title} | ${siteConfig.name}`,
     description: excerpt,
     openGraph: {
       title: title,
