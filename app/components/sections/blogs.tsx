@@ -123,10 +123,3 @@ export default async function Blogs() {
     </section>
   );
 }
-
-export async function generateStaticParams() {
-  const posts = getAllPostSlugs();
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-}
