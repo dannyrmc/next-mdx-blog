@@ -64,7 +64,8 @@ async function getPostData(slug: string): Promise<Post | null> {
   }
 }
 
-export async function generateMetadata({ params }: { params: BlogParams }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<BlogParams> }): Promise<Metadata> {
+  const params = await props.params;
   const post = await getPostData(params.slug);
 
   if (!post) {
@@ -149,10 +150,11 @@ const MoreBlogs: React.FC<MoreBlogsProps> = ({ currentSlug, allPosts }) => {
 };
 
 interface PostProps {
-  params: BlogParams;
+  params: Promise<BlogParams>;
 }
 
-export default async function Post({ params }: PostProps) {
+export default async function Post(props: PostProps) {
+  const params = await props.params;
   const post = await getPostData(params.slug);
 
   if (!post) {
